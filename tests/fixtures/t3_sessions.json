@@ -1,0 +1,122 @@
+[
+  {
+    "category": "good",
+    "problem": "One lap of a standard running track is 400 meters. Calculate the number of laps each athlete runs in a 5000 meter race. Express your answer as a mixed number or decimal, including units if necessary.",
+    "answer": "12.5",
+    "difficulty": "medium",
+    "transcript": [
+      {
+        "role": "student",
+        "content": "I'm a bit confused — the question asks for the number of laps in a 5000-meter race, and I know one lap is 400 meters. So I think I need to divide 5000 by 400 to find how many laps that is. Let me try that."
+      },
+      {
+        "role": "tutor",
+        "action": "ask_question",
+        "content": "[ask_question] What operation do we use to find how many laps an athlete runs if we know the distance of one lap and the total distance of the race?"
+      },
+      {
+        "role": "student",
+        "content": "We use division: total distance divided by distance per lap. So, 5000 ÷ 400."
+      },
+      {
+        "role": "tutor",
+        "action": "ask_question",
+        "content": "[ask_question] Now, can you perform that division? What is the result?"
+      },
+      {
+        "role": "student",
+        "content": "5000 ÷ 400 = 12.5. So, the athlete runs 12.5 laps."
+      }
+    ]
+  },
+  {
+    "category": "leaky",
+    "problem": "Solve the equation in integers $x^{4} - 2y^{4} - 4z^{4} - 8t^{4} = 0$.",
+    "answer": "x = y = z = t = 0",
+    "difficulty": "medium",
+    "transcript": [
+      {
+        "role": "student",
+        "content": "I don't know where to start... Is this like a Diophantine equation? I think we need to find integer solutions, but I'm not sure how to approach the powers. Maybe try small numbers like 0 or 1?"
+      },
+      {
+        "role": "tutor",
+        "action": "ask_question",
+        "content": "[ask_question] What happens if you try substituting x, y, z, and t with 0 in the equation? What does that tell you about the solution?"
+      },
+      {
+        "role": "student",
+        "content": "If I plug in 0 for all variables: 0 - 0 - 0 - 0 = 0. Oh! So (0,0,0,0) is a solution. But are there others? I don't know... maybe that's the only one? I'm not sure how to check."
+      }
+    ]
+  },
+  {
+    "category": "failed",
+    "problem": "A hurricane is approaching the southern coast of Texas, and a rancher is planning to move some head of cattle 60 miles to higher ground to protect them from possible inland flooding that might occur. His animal transport truck holds 20 head of cattle. Traveling at 60 miles per hour, it took him 40 hours to transport all of his cattle to higher ground. How many head of cattle did the rancher have to move?",
+    "answer": "400",
+    "difficulty": "medium",
+    "transcript": [
+      {
+        "role": "student",
+        "content": "I'm confused about how to use the 40 hours and 60 mph to find the number of cattle. I know distance = rate × time, so 60 mph × 40 hours = 2400 miles, but that doesn't seem to relate to the 60-mile trip. Maybe I'm misreading the problem."
+      },
+      {
+        "role": "tutor",
+        "action": "ask_question",
+        "content": "[ask_question] How many trips did the rancher make to transport all his cattle?"
+      },
+      {
+        "role": "student",
+        "content": "Distance is 60 miles, speed is 60 mph, so time per trip is 60 / 60 = 1 hour. Total time is 40 hours, so number of trips is 40. That makes sense. So he made 40 trips."
+      },
+      {
+        "role": "tutor",
+        "action": "correct_error",
+        "content": "[correct_error] That's correct! You've figured out that the rancher made 40 trips. Now, if his truck can carry 20 head of cattle each trip, how many head of cattle did the rancher have to move?"
+      },
+      {
+        "role": "student",
+        "content": "40 trips times 20 head per trip = 800 head of cattle. So, he had to move 800 head."
+      },
+      {
+        "role": "tutor",
+        "action": "correct_error",
+        "content": "[correct_error] You've done a great job! You correctly calculated that the rancher had to move 800 head of cattle. Do you have any other questions on this problem?"
+      },
+      {
+        "role": "student",
+        "content": "No, I think that's all clear now. Thanks for the help!"
+      },
+      {
+        "role": "tutor",
+        "action": "encourage",
+        "content": "[encourage] You're welcome! I'm glad you understand now. Keep up the good work!"
+      },
+      {
+        "role": "student",
+        "content": "Thanks again! 😊"
+      }
+    ]
+  },
+  {
+    "category": "cold_solve",
+    "problem": "Round the number 0.000077 to the nearest 0.00001 and express the result in scientific notation. Use the format $\\\\boxed{a \\\\times 10^{b}}$ for your answer.",
+    "answer": "8 \\\\times 10^{-5}",
+    "difficulty": "medium",
+    "transcript": [
+      {
+        "role": "student",
+        "content": "I'm confused about how to round to the nearest 0.00001. Is that the same as rounding to 5 decimal places? I think 0.000077 is already close to 0.00008, but I'm not sure if that's correct."
+      },
+      {
+        "role": "tutor",
+        "action": "ask_question",
+        "content": "[ask_question] What operation undoes the multiplication here?"
+      },
+      {
+        "role": "student",
+        "content": "Oh! I see — if we multiply by something, to undo it we divide. So if it was multiplied by 10, we divide by 10. But I'm not sure what the original multiplication was in this problem. I think I'm mixing up the steps."
+      }
+    ]
+  }
+]

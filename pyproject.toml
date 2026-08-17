@@ -1,0 +1,60 @@
+[project]
+name = "its"
+version = "0.1.0"
+description = "SAGE: a Socratic math tutor trained with multi-turn GRPO against a simulated student"
+readme = "README.md"
+authors = [{ name = "Paulo Oliva", email = "paulo.botelho.001@student.uni.lu" }]
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.13"
+dependencies = [
+    "tqdm>=4.67.3",
+    "transformers[torch]",
+    "torch~=2.9.0",
+    "datasets>=4.8.5",
+    "accelerate>=1.13.0",
+    "wandb>=0.27.0",
+    "peft>=0.14.0",
+    "math-verify>=0.5.0",
+    "trl[vllm]>=1.5.1",
+    "numpy>=2.2.6",
+    "pandas>=2.3.3",
+    "python-dotenv>=1.2.2",
+]
+
+[project.scripts]
+preprocess = "its.scripts.bigmath_preprocessing:main"
+socrateach = "its.scripts.socrateach_preprocessing:main"
+kb = "its.scripts.kb_preprocessing:main"
+sft = "its.training.sft:main"
+grpo = "its.training.grpo:main"
+eval-build-set = "its.evaluation.make_eval_set:main"
+eval-sessions = "its.evaluation.harness:main"
+eval-judge = "its.evaluation.judges:main"
+eval-report = "its.evaluation.report:main"
+eval-chat = "its.evaluation.chat:main"
+eval-figures = "its.evaluation.figures:main"
+
+[build-system]
+requires = ["uv_build>=0.11.9,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "isort>=8.0.1",
+    "matplotlib>=3.11.0",
+    "pytest>=8.0",
+]
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+include = ["src", "tests", "tools"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "judge: loads the real LLM judge model (opt-in, slow)",
+    "model: loads a tokenizer or the 0.5B model (opt-in, slow)",
+]
+addopts = "-m 'not judge and not model'"
